@@ -152,3 +152,25 @@ footer{background:#0d0d0d}
 .hero{position:relative}
 .news-ticker{position:relative;z-index:5;margin-top:-57px}
 @media(max-width:650px){.news-ticker{margin-top:-48px}}
+
+
+/* Hero balance: enlarge the message and anchor CTA near the ticker */
+@media(min-width:901px){
+ .hero{align-items:stretch}
+ .hero-content{display:flex;flex-direction:column;justify-content:flex-end;box-sizing:border-box;padding:20px 0 92px;margin-left:5%;width:min(600px,43vw);max-width:none}
+ .hero .eyebrow{font-size:clamp(10px,.76vw,13px);letter-spacing:1.15px}
+ .hero h1{font-size:clamp(42px,min(4.1vw,7.4vh),76px);line-height:1.02;margin:18px 0 22px}
+ .hero-content>p{font-size:clamp(14px,1.02vw,17px);line-height:1.55;max-width:510px;margin-bottom:24px}
+ .hero .btn{padding:16px 21px;font-size:11px}
+ .hero-actions{gap:12px}
+}
+@media(min-width:651px) and (max-width:900px){
+ .hero-content{display:flex;flex-direction:column;justify-content:flex-end;box-sizing:border-box;padding:25px 0 88px;max-width:53vw}
+ .hero h1{font-size:clamp(36px,4.7vw,55px)}
+ .hero-content>p{font-size:14px}
+}
+@media(max-width:650px){
+ .hero-content{padding-bottom:82px}
+ .hero h1{font-size:clamp(40px,10.4vw,62px)}
+ .hero-content>p{font-size:14px;line-height:1.5}
+}
