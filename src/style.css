@@ -146,3 +146,9 @@ footer{background:#0d0d0d}
  .hero-content{padding:45px 0 30px}
 }
 @media(max-width:650px){.hero .eyebrow{font-size:clamp(7px,1.85vw,9px);letter-spacing:.15px;gap:5px}}
+
+
+/* Lift the news ticker into the hero and remove the empty bottom gutter */
+.hero{position:relative}
+.news-ticker{position:relative;z-index:5;margin-top:-57px}
+@media(max-width:650px){.news-ticker{margin-top:-48px}}
