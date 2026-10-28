@@ -181,3 +181,31 @@ footer{background:#0d0d0d}
 .roto-identity-mark svg{width:43px;height:43px;stroke:currentColor}
 .roto-identity-mark span{font-size:9px;font-weight:900;line-height:1.35;letter-spacing:1.6px;text-align:left}
 .ticker-separator{font-size:10px!important;color:#d4a347;transform:rotate(45deg)}
+
+
+/* Dimensional ROTO UI: tactile buttons and layered editorial cards */
+:root{--roto-elevation:0 7px 0 rgba(18,17,14,.2),0 17px 28px rgba(18,17,14,.16)}
+.btn,.navcta,.callout .btn.gold{
+ position:relative;border-radius:14px!important;isolation:isolate;
+ box-shadow:0 5px 0 rgba(20,18,15,.26),0 13px 24px rgba(19,18,16,.18),inset 0 1px 0 rgba(255,255,255,.3);
+ transform:translateY(0);transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;
+}
+.btn::before,.navcta::before{content:'';position:absolute;inset:1px 2px auto;height:45%;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,.22),transparent);pointer-events:none;opacity:.65}
+.btn:hover,.navcta:hover,.callout .btn.gold:hover{transform:translateY(-4px);box-shadow:0 9px 0 rgba(20,18,15,.22),0 22px 32px rgba(19,18,16,.22),0 0 22px rgba(212,163,71,.15)}
+.btn:active,.navcta:active,.callout .btn.gold:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(20,18,15,.25),0 5px 12px rgba(19,18,16,.12)}
+.btn:focus-visible,.navcta:focus-visible{outline:3px solid #c99a43;outline-offset:5px}
+.hero .btn.gold{background:linear-gradient(145deg,#292722,#080808);color:#fff;border:1px solid #333}
+.hero .btn.ghost{background:linear-gradient(145deg,#fff,#e5e1d9);border:1px solid #b9b2a6;color:#111}
+.talent-grid{perspective:1400px;gap:26px;padding:16px 12px 36px}
+.talent-card{border-radius:19px;transform:perspective(1100px) rotateX(3deg) rotateY(-2deg) translateY(0);transform-style:preserve-3d;overflow:hidden;border:1px solid rgba(255,255,255,.28);box-shadow:0 8px 0 rgba(20,20,20,.13),0 22px 36px rgba(0,0,0,.22);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease;will-change:transform}
+.talent-card:nth-child(2){transform:perspective(1100px) rotateX(1deg) rotateY(0deg) translateY(-12px);z-index:2}
+.talent-card:nth-child(3){transform:perspective(1100px) rotateX(3deg) rotateY(2deg)}
+.talent-card:hover,.talent-card:focus-within{transform:perspective(1100px) rotateX(0deg) rotateY(0deg) translateY(-20px) scale(1.025);z-index:4;box-shadow:0 15px 0 rgba(20,20,20,.1),0 32px 54px rgba(0,0,0,.29)}
+.talent-info{transform:translateZ(18px)}
+.steps{perspective:1300px}
+.step,.pioneers-grid article{position:relative;border-radius:16px;box-shadow:0 5px 0 rgba(0,0,0,.23),0 18px 30px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.1);transition:transform .3s ease,box-shadow .3s ease}
+.step:hover,.pioneers-grid article:hover{transform:translateY(-9px);box-shadow:0 10px 0 rgba(0,0,0,.2),0 26px 42px rgba(0,0,0,.25)}
+.pioneers-grid{gap:16px;background:transparent;border:0}
+.pioneers-grid article{border:1px solid #49453c}
+@media(max-width:650px){.talent-grid{gap:22px;padding:12px 4px 24px}.talent-card,.talent-card:nth-child(2),.talent-card:nth-child(3){transform:none}.talent-card:hover{transform:translateY(-5px) scale(1.01)}.btn,.navcta{border-radius:11px!important}.pioneers-grid{gap:16px}}
+@media(prefers-reduced-motion:reduce){.btn,.navcta,.talent-card,.step,.pioneers-grid article{transition:none!important;transform:none!important}.btn:hover,.navcta:hover,.talent-card:hover,.step:hover,.pioneers-grid article:hover{transform:none!important}}
