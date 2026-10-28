@@ -209,3 +209,42 @@ footer{background:#0d0d0d}
 .pioneers-grid article{border:1px solid #49453c}
 @media(max-width:650px){.talent-grid{gap:22px;padding:12px 4px 24px}.talent-card,.talent-card:nth-child(2),.talent-card:nth-child(3){transform:none}.talent-card:hover{transform:translateY(-5px) scale(1.01)}.btn,.navcta{border-radius:11px!important}.pioneers-grid{gap:16px}}
 @media(prefers-reduced-motion:reduce){.btn,.navcta,.talent-card,.step,.pioneers-grid article{transition:none!important;transform:none!important}.btn:hover,.navcta:hover,.talent-card:hover,.step:hover,.pioneers-grid article:hover{transform:none!important}}
+
+
+/* Talent category pages and accessible full-card navigation */
+.talent-card-link{display:block;position:relative;width:100%;height:100%;color:inherit;text-decoration:none}
+.talent-card-link>img{display:block;width:100%;height:100%;object-fit:cover}
+.talent-card-link:focus-visible{outline:4px solid #d8a94b;outline-offset:-5px}
+.talent-open{display:inline-flex!important;align-items:center;gap:8px;margin-top:14px;color:#f0bd62!important;font-size:11px!important;letter-spacing:1px;font-weight:900}
+.category-page{background:#f0eee9;color:#111;min-height:80vh}
+.category-hero{position:relative;min-height:560px;display:flex;align-items:center;background:#111;color:white;overflow:hidden}
+.category-hero-image{position:absolute;inset:0;background-size:cover;background-position:center;filter:grayscale(.4)}
+.category-hero-copy{position:relative;z-index:1;width:min(900px,90%);margin:0 auto;padding:75px 0}
+.category-back{display:inline-block;color:#d9b46d;font-size:12px;letter-spacing:1px;font-weight:900;text-decoration:none;margin-bottom:42px}
+.category-hero .section-label{color:#d9b46d}
+.category-hero h1{font-family:'DM Sans',sans-serif;text-transform:uppercase;font-size:clamp(48px,7.5vw,112px);font-weight:1000;line-height:.94;letter-spacing:-.06em;max-width:920px;margin:22px 0}
+.category-hero p{max-width:600px;font-size:17px;line-height:1.6;color:#e7e2da;margin-bottom:27px}
+.category-hero .btn.gold,.profiles-empty .btn.gold{background:#d5a54b;color:#111;border-color:#d5a54b}
+.category-body{max-width:1550px;margin:auto}
+.category-intro{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;margin-bottom:50px}
+.category-intro h2{font-size:clamp(42px,5vw,80px);margin:16px 0 0}
+.category-intro h2 em{color:#a47729;font-style:normal}
+.category-intro>p{font-size:17px;line-height:1.75;color:#3e3b36}
+.category-media-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.media-preview{min-height:370px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:36px;background:radial-gradient(circle at 78% 12%,#58472c,#181818 52%,#101010);color:#fff;border-radius:20px;box-shadow:0 9px 0 #0002,0 25px 35px #0002}
+.photo-preview{background:radial-gradient(circle at 70% 10%,#65625a,#262625 55%,#121212)}
+.media-icon{display:grid;place-items:center;width:65px;height:65px;border:1px solid #cba052;border-radius:50%;color:#e3b765;margin-bottom:auto}
+.media-preview>span{font-size:10px;letter-spacing:2px;font-weight:900;color:#d9b46d}
+.media-preview h3{font-size:clamp(24px,2.8vw,42px);font-weight:1000;text-transform:uppercase;line-height:1.04;margin:14px 0}
+.media-preview p{font-size:14px;line-height:1.6;max-width:460px;color:#d4d0c9}
+.profiles-empty{margin:90px 0;padding:55px;border:1px solid #c9c2b6;border-radius:18px;background:#e9e5dd}
+.profiles-empty h2{font-size:clamp(34px,4vw,60px);margin:16px 0}
+.profiles-empty p{max-width:730px;font-size:16px;line-height:1.7;color:#45403a;margin-bottom:30px}
+.story-guide h2{font-size:clamp(30px,3vw,50px);margin-bottom:24px}
+.story-guide>div{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.story-guide article{padding:30px;border:1px solid #c7c0b4;border-radius:15px}
+.story-guide article span{color:#a47729;font-weight:900}
+.story-guide article p{font-weight:800;font-size:17px;line-height:1.4}
+.category-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:38px}
+.category-tags span{border:1px solid #c6bfb3;border-radius:30px;padding:10px 16px;font-size:12px;font-weight:800}
+@media(max-width:700px){.category-hero{min-height:490px}.category-hero-copy{padding:55px 0}.category-hero h1{font-size:clamp(42px,10vw,72px)}.category-hero p{font-size:14px}.category-intro,.category-media-grid,.story-guide>div{grid-template-columns:1fr}.category-intro{gap:10px}.media-preview{min-height:310px;padding:26px}.profiles-empty{padding:28px;margin:55px 0}.category-body{padding:60px 6%}}
