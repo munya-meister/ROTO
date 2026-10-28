@@ -11,3 +11,66 @@
 .hero .orb,.hero .horizon,.hero .stars{display:none}
 .hero .scroll{left:6%;right:auto}
 @media(max-width:650px){.hero{min-height:720px;background-position:59% center}.hero::before{background:linear-gradient(90deg,rgba(5,10,24,.88),rgba(5,10,24,.48)),linear-gradient(0deg,rgba(5,10,24,.6),transparent 60%)}.hero-content{margin:0 6%;padding:110px 0 80px}.hero h1{font-size:clamp(43px,11vw,65px);letter-spacing:-1px}.hero .scroll{left:6%}}
+
+
+/* ROTO editorial redesign — monochrome typography, cinematic documentary photography */
+:root{--paper:#f0eee9;--ink:#101011;--gold:#d8a94b}
+body{background:var(--paper);color:var(--ink)}
+.nav{height:94px;background:var(--paper);color:var(--ink);border-bottom:1px solid #17171725;padding:0 5%;position:relative}
+.brand{font-family:'DM Sans',sans-serif;font-size:28px;letter-spacing:.14em;font-weight:900;color:#111}
+.brand small{font-size:8px;letter-spacing:2.2px;font-weight:700}
+.brand-logo{width:65px;height:65px}
+.navlinks{color:#191919;gap:34px;text-transform:uppercase;font-size:10px;letter-spacing:1.2px;font-weight:800}
+.navlinks a:hover{color:#9b712d}
+.navcta{border-radius:0;background:#111;color:white;text-transform:uppercase;letter-spacing:1px;font-size:10px;padding:16px 20px}
+.hero{height:740px;min-height:680px;background:var(--paper);position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.hero::before{content:'';position:absolute;inset:0 0 0 33%;z-index:0;background:linear-gradient(90deg,var(--paper) 0%,rgba(240,238,233,.72) 15%,rgba(240,238,233,0) 45%),url('/home-bg.png') 58% center/cover no-repeat}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:24%;background:linear-gradient(0deg,rgba(14,14,14,.13),transparent);pointer-events:none}
+.hero-wordmark{position:absolute;z-index:1;left:4%;top:2%;font-family:'DM Sans',sans-serif;font-weight:1000;font-size:clamp(180px,31vw,570px);line-height:1;letter-spacing:-.095em;color:#111;white-space:nowrap;pointer-events:none;mix-blend-mode:multiply;opacity:.88}
+.hero-content{position:relative;z-index:3;max-width:560px;margin:0 0 0 5%;padding:0 0 92px;text-align:left}
+.hero .eyebrow{color:#161616;font-size:10px;letter-spacing:2px;font-weight:900;max-width:300px}
+.hero .dot{background:var(--gold);box-shadow:none}
+.hero h1{font-family:'DM Sans',sans-serif;font-size:clamp(34px,4.15vw,66px);font-weight:1000;letter-spacing:-.06em;line-height:.99;color:#111;text-transform:uppercase;margin:23px 0}
+.hero h1 em{font-style:normal;color:#a47729;font-weight:1000}
+.hero-content>p{color:#252525;max-width:390px;font-size:13px;line-height:1.65;font-weight:600;margin-bottom:22px}
+.hero-actions{justify-content:flex-start}
+.hero .btn{border-radius:0;font-size:10px;letter-spacing:.6px;text-transform:uppercase;padding:15px 18px}
+.hero .btn.gold{background:#111;color:white;border-color:#111}
+.hero .btn.ghost{background:var(--paper);border:1px solid #161616;color:#161616}
+.hero .scroll{color:#111;bottom:18px;left:5%;font-weight:800}
+.section{padding:105px 6%}
+.section-label{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:900;letter-spacing:2px;color:#9b712d}
+.intro,.showcase{background:var(--paper);color:#111}
+.intro{border-top:8px solid #111;padding-top:90px;padding-bottom:80px}
+.intro h2,.section h2{font-family:'DM Sans',sans-serif;font-weight:1000;text-transform:uppercase;letter-spacing:-.055em;line-height:1.02}
+.intro h2 em,.showcase h2 em,.story h2 em,.process h2 em,.callout h2 em{font-style:normal;color:#a47729;font-weight:1000}
+.intro p{color:#333;line-height:1.8}
+.showcase{padding-top:30px;padding-bottom:105px}
+.section-heading p{color:#444}
+.talent-grid{gap:14px}
+.talent-card{border-radius:0;height:430px}
+.talent-card img{filter:grayscale(1);transition:transform .5s,filter .5s}
+.talent-card:hover img{filter:grayscale(.2);transform:scale(1.06)}
+.talent-info h3{font-family:'DM Sans',sans-serif;text-transform:uppercase;font-weight:900;letter-spacing:-.035em}
+.talent-info span{color:#eac075}
+.story{background:#d7d5d0;color:#111;gap:6%}
+.story-visual img{border-radius:0;filter:grayscale(1);height:530px}
+.story-badge{border-radius:0;background:#111}
+.story-copy p{color:#333}
+.story blockquote{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:800;color:#111;border-color:#aa7c32}
+.process{background:#111;color:#f4f2ec}
+.process .section-label{color:#d6a857}
+.process h2{max-width:950px}
+.step{border:1px solid #444;background:#181818;border-radius:0;min-height:280px}
+.step h3{font-family:'DM Sans',sans-serif;font-size:23px;text-transform:uppercase;font-weight:900}
+.step p{color:#b9b9b9}
+.step-icon,.step-num{color:#d8aa54}
+.callout{background:#e5e2da;color:#111}
+.callout p{color:#333}
+.callout-inner>span{color:#9b712d}
+.callout .btn.gold{border-radius:0;background:#111;color:#fff;border-color:#111}
+footer{background:#0d0d0d}
+.footer-brand{font-family:'DM Sans',sans-serif;font-weight:1000;letter-spacing:.1em}
+.footer-logo{border-radius:0}
+@media(max-width:900px){.hero-wordmark{font-size:32vw;top:10%}.hero::before{inset:0 0 0 17%;background:linear-gradient(90deg,var(--paper),rgba(240,238,233,.38) 50%,transparent 90%),url('/home-bg.png') 62% center/cover no-repeat}.hero-content{max-width:490px}.navlinks{gap:13px;font-size:9px}}
+@media(max-width:650px){.nav{height:76px;padding:0 5%}.brand-logo{width:47px;height:47px}.brand{font-size:22px}.brand small{font-size:6px}.menubtn{display:block;color:#111}.navlinks{top:76px;background:var(--paper);color:#111;border-bottom:1px solid #ddd}.hero{height:auto;min-height:730px;align-items:flex-end}.hero::before{inset:0;background:linear-gradient(0deg,var(--paper) 0%,rgba(240,238,233,.93) 25%,rgba(240,238,233,.05) 70%),url('/home-bg.png') 67% 12%/auto 68% no-repeat}.hero-wordmark{font-size:32vw;top:1%;left:3%}.hero-content{margin:0 6%;padding:0 0 88px;max-width:100%}.hero h1{font-size:clamp(37px,10vw,56px);letter-spacing:-.06em}.hero-content>p{font-size:12px;max-width:95%}.hero .scroll{left:6%}.section{padding:75px 6%}.intro{padding-top:65px}.talent-card{height:370px}.story-visual img{height:350px}.step{min-height:auto}}
