@@ -174,3 +174,10 @@ footer{background:#0d0d0d}
  .hero h1{font-size:clamp(40px,10.4vw,62px)}
  .hero-content>p{font-size:14px;line-height:1.5}
 }
+
+
+/* Unique identity mark: a fingerprint represents ability beyond appearances */
+.roto-identity-mark{display:inline-flex;align-items:center;gap:13px;color:#ad7d2c;margin-bottom:16px}
+.roto-identity-mark svg{width:43px;height:43px;stroke:currentColor}
+.roto-identity-mark span{font-size:9px;font-weight:900;line-height:1.35;letter-spacing:1.6px;text-align:left}
+.ticker-separator{font-size:10px!important;color:#d4a347;transform:rotate(45deg)}
