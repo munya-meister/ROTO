@@ -256,3 +256,22 @@ footer{background:#0d0d0d}
 .category-hero h1{font-size:clamp(42px,5.25vw,83px);max-width:1000px;line-height:1.01;letter-spacing:-.055em;margin:20px 0 25px;text-wrap:balance}
 .category-hero p{font-size:clamp(14px,1.05vw,17px);max-width:640px}
 @media(max-width:700px){.category-hero{min-height:calc(100svh - 76px)}.category-hero-copy{width:88%;padding:42px 0}.category-hero h1{font-size:clamp(38px,9vw,62px);line-height:1.04;margin:18px 0 22px}.category-hero p{font-size:14px}}
+
+
+/* Mobile hero readability: separate documentary image from copy */
+@media(max-width:650px){
+ .hero{display:block;position:relative;height:auto;min-height:0;max-height:none;background:#f0eee9;overflow:hidden}
+ .hero::before{content:'';position:absolute;inset:0 0 auto 0;height:330px;background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(240,238,233,0) 63%,#f0eee9 100%),url('/home-bg.png') 66% 42%/cover no-repeat;z-index:0}
+ .hero::after{display:none}
+ .hero-wordmark{display:none}
+ .hero-content{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-start;box-sizing:border-box;width:100%;max-width:none;margin:0;padding:320px 6% 76px;background:linear-gradient(to bottom,transparent 0px,#f0eee9 350px)}
+ .hero .eyebrow{color:#25221e;display:flex;align-items:center;white-space:normal;width:auto;max-width:100%;gap:7px;font-size:clamp(9px,2.35vw,11px);letter-spacing:.25px;line-height:1.35}
+ .hero .eyebrow-line{white-space:normal;flex-shrink:1;color:#25221e}
+ .hero h1{color:#101010;font-size:clamp(36px,9.7vw,51px);line-height:1.03;letter-spacing:-.065em;margin:18px 0 18px;overflow-wrap:normal}
+ .hero h1 em{color:#a47729}
+ .hero-content>p{color:#292620;font-size:15px;line-height:1.58;font-weight:550;max-width:100%;margin:0 0 25px}
+ .hero-actions{display:flex;flex-direction:column;align-items:stretch;gap:13px;width:100%;margin:0}
+ .hero-actions .btn{width:100%;box-sizing:border-box;justify-content:space-between;min-height:54px;padding:15px 19px;font-size:12px}
+ .news-ticker{margin-top:0;position:relative}
+}
+@media(max-width:380px){.hero-content{padding-top:310px}.hero h1{font-size:clamp(33px,9.2vw,40px)}}
