@@ -292,3 +292,20 @@ footer{background:#0d0d0d}
  .hero-content{padding-top:225px}
  .hero h1{font-size:clamp(32px,9vw,39px)}
 }
+
+
+/* Definitive mobile hero fix: image and content occupy separate layout rows */
+@media(max-width:650px){
+ .hero{display:flex!important;flex-direction:column!important;align-items:stretch!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;background:#f0eee9!important}
+ .hero::before{content:""!important;position:relative!important;display:block!important;inset:auto!important;flex:none!important;width:100%!important;height:clamp(210px,58vw,290px)!important;background:url('/home-bg.png') 66% 45%/cover no-repeat!important;z-index:auto!important}
+ .hero::after{display:none!important}
+ .hero-wordmark,.hero .stars,.hero .orb,.hero .horizon{display:none!important}
+ .hero-content{position:relative!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;align-items:stretch!important;flex:none!important;width:100%!important;max-width:none!important;margin:0!important;padding:22px 6% 34px!important;background:#f0eee9!important;transform:none!important;box-sizing:border-box!important}
+ .hero .eyebrow{max-width:100%!important;width:auto!important;white-space:normal!important;color:#181818!important}
+ .hero .eyebrow-line{white-space:normal!important;color:#181818!important}
+ .hero h1{color:#111!important;font-size:clamp(32px,8.8vw,46px)!important;line-height:1.04!important;margin:15px 0 16px!important;max-width:100%!important}
+ .hero-content>p{color:#27241f!important;font-size:14px!important;line-height:1.5!important;margin:0 0 20px!important;max-width:100%!important}
+ .hero-actions{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:12px!important;margin:0!important;width:100%!important}
+ .hero-actions .btn{width:100%!important;min-height:52px!important;box-sizing:border-box!important;justify-content:space-between!important}
+ .news-ticker{margin-top:0!important}
+}
