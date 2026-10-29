@@ -275,3 +275,20 @@ footer{background:#0d0d0d}
  .news-ticker{margin-top:0;position:relative}
 }
 @media(max-width:380px){.hero-content{padding-top:310px}.hero h1{font-size:clamp(33px,9.2vw,40px)}}
+
+
+/* Compact mobile hero: keep the photograph, headline and actions closer together */
+@media(max-width:650px){
+ .hero::before{height:260px;background:linear-gradient(180deg,rgba(0,0,0,.02) 0%,rgba(240,238,233,0) 56%,#f0eee9 100%),url('/home-bg.png') 66% 40%/cover no-repeat}
+ .hero-content{padding:248px 6% 38px;background:linear-gradient(to bottom,transparent 0px,#f0eee9 278px)}
+ .hero .eyebrow{font-size:clamp(9px,2.3vw,11px)}
+ .hero h1{font-size:clamp(34px,9.1vw,47px);line-height:1.025;margin:13px 0 14px}
+ .hero-content>p{font-size:14px;line-height:1.46;margin-bottom:19px}
+ .hero-actions{gap:11px}
+ .hero-actions .btn{min-height:50px;padding:12px 17px}
+}
+@media(max-width:380px){
+ .hero::before{height:235px}
+ .hero-content{padding-top:225px}
+ .hero h1{font-size:clamp(32px,9vw,39px)}
+}
