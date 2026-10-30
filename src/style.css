@@ -309,3 +309,21 @@ footer{background:#0d0d0d}
  .hero-actions .btn{width:100%!important;min-height:52px!important;box-sizing:border-box!important;justify-content:space-between!important}
  .news-ticker{margin-top:0!important}
 }
+
+
+/* Editorial photo cards inspired by travel guide layout */
+.pioneers-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;background:transparent;border:0;align-items:stretch}
+.pioneers-grid .pioneer-card{display:flex;flex-direction:column;padding:7px;min-height:0;background:linear-gradient(150deg,#363e3e,#1a1d1e 55%,#111);border:1px solid rgba(235,226,206,.23);border-radius:22px;overflow:hidden;box-shadow:0 9px 0 rgba(0,0,0,.3),0 24px 42px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.17);transition:transform .35s ease,box-shadow .35s ease}
+.pioneers-grid .pioneer-card:hover{transform:translateY(-10px);box-shadow:0 15px 0 rgba(0,0,0,.22),0 34px 52px rgba(0,0,0,.42)}
+.pioneer-photo{position:relative;width:100%;height:clamp(180px,18vw,285px);overflow:hidden;border-radius:16px 16px 9px 9px;background:linear-gradient(140deg,#5a5c55,#242624)}
+.pioneer-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:grayscale(.65) contrast(1.05);transition:transform .5s ease,filter .5s ease}
+.pioneer-card:hover .pioneer-photo img{transform:scale(1.045);filter:grayscale(.1)}
+.pioneer-copy{display:flex;flex:1;flex-direction:column;padding:25px 20px 18px}
+.pioneer-copy>span{color:#d9aa50;font-size:10px;font-weight:900;letter-spacing:1.8px}
+.pioneers-grid .pioneer-copy h3{font-size:clamp(21px,2.15vw,33px);line-height:1.07;margin:12px 0 12px;overflow-wrap:anywhere}
+.pioneers-grid .pioneer-copy p{font-size:14px;line-height:1.65;margin:0;color:#e0ddd7}
+.pioneer-source{margin-top:auto;padding-top:22px}
+.pioneer-source a{font-size:10px;color:#d3b77e;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.pioneers-grid{gap:15px}.pioneer-copy{padding:18px 13px}.pioneer-photo{height:190px}}
+@media(max-width:650px){.pioneers-grid{grid-template-columns:1fr;gap:24px}.pioneer-photo{height:260px}.pioneer-copy{padding:23px 19px}.pioneers-grid .pioneer-copy h3{font-size:28px}}
+@media(prefers-reduced-motion:reduce){.pioneer-photo img,.pioneers-grid .pioneer-card{transition:none!important}}
