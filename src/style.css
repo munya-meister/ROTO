@@ -345,3 +345,24 @@ footer{background:#0d0d0d}
 @media(max-width:1050px){.process .steps .step{flex-basis:25vw!important;width:25vw!important;min-height:365px!important;margin:0 -10px!important;padding:24px 18px!important}.process .steps{padding:40px 14px 65px!important;min-height:475px!important}}
 @media(max-width:700px){.process .steps{display:flex!important;justify-content:flex-start!important;align-items:stretch!important;overflow-x:auto!important;scroll-snap-type:x mandatory;gap:15px!important;min-height:0!important;padding:24px 20px 38px!important;border-radius:22px;-webkit-overflow-scrolling:touch}.process .steps::before{display:none}.process .steps .step,.process .steps .step:nth-child(n){flex:0 0 min(78vw,315px)!important;width:min(78vw,315px)!important;min-height:310px!important;margin:0!important;padding:25px 22px!important;transform:none!important;scroll-snap-align:center;z-index:auto!important}.process .steps .step:hover,.process .steps .step:focus-visible{transform:translateY(-4px)!important}.process .steps .step h3{font-size:23px}.process .steps .step p{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.process .steps .step{transition:none!important}}
+
+
+/* Cinematic photo-backed process cards with gentle independent shaking */
+.process .steps .step{position:relative!important;overflow:hidden!important;background-color:#181512!important;background-size:cover!important;background-position:center!important;isolation:isolate;animation:rotoCardShake 5.2s ease-in-out infinite;animation-delay:calc(var(--fan-index) * -.85s)}
+.process .steps .step:nth-child(1){background-image:linear-gradient(180deg,rgba(5,5,5,.08) 0%,rgba(5,5,5,.55) 35%,rgba(5,5,5,.96) 78%),url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&q=85')!important}
+.process .steps .step:nth-child(2){background-image:linear-gradient(180deg,rgba(5,5,5,.07) 0%,rgba(5,5,5,.58) 35%,rgba(5,5,5,.96) 78%),url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=85')!important}
+.process .steps .step:nth-child(3){background-image:linear-gradient(180deg,rgba(5,5,5,.07) 0%,rgba(5,5,5,.58) 35%,rgba(5,5,5,.96) 78%),url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=85')!important}
+.process .steps .step:nth-child(4){background-image:linear-gradient(180deg,rgba(5,5,5,.07) 0%,rgba(5,5,5,.58) 35%,rgba(5,5,5,.96) 78%),url('https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=800&q=85')!important}
+.process .steps .step .step-num,.process .steps .step .step-icon,.process .steps .step h3,.process .steps .step p{position:relative;z-index:1;text-shadow:0 2px 8px rgba(0,0,0,.85)}
+.process .steps .step p{color:#f2eee7!important}
+.process .steps .step:hover,.process .steps .step:focus-visible{animation-play-state:paused!important}
+@keyframes rotoCardShake{
+ 0%,100%{translate:0 0;rotate:0deg}
+ 12%{translate:-2px 1px;rotate:-.6deg}
+ 24%{translate:2px -2px;rotate:.65deg}
+ 36%{translate:-1px 2px;rotate:-.35deg}
+ 48%,82%{translate:0 0;rotate:0deg}
+ 90%{translate:1px -1px;rotate:.3deg}
+}
+@media(max-width:700px){.process .steps .step{animation-duration:6.5s}}
+@media(prefers-reduced-motion:reduce){.process .steps .step{animation:none!important}}
