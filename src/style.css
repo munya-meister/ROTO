@@ -327,3 +327,21 @@ footer{background:#0d0d0d}
 @media(max-width:900px){.pioneers-grid{gap:15px}.pioneer-copy{padding:18px 13px}.pioneer-photo{height:190px}}
 @media(max-width:650px){.pioneers-grid{grid-template-columns:1fr;gap:24px}.pioneer-photo{height:260px}.pioneer-copy{padding:23px 19px}.pioneers-grid .pioneer-copy h3{font-size:28px}}
 @media(prefers-reduced-motion:reduce){.pioneer-photo img,.pioneers-grid .pioneer-card{transition:none!important}}
+
+
+/* Portfolio-inspired overlapping fan for the four ROTO journey steps */
+.process .steps{position:relative!important;display:flex!important;justify-content:center!important;align-items:center!important;gap:0!important;min-height:510px!important;padding:55px 30px 65px!important;margin-top:24px!important;isolation:isolate;overflow:visible!important;border:1px solid rgba(193,143,52,.35);border-radius:34px;background:radial-gradient(ellipse at 50% 90%,rgba(168,116,32,.14),transparent 63%),linear-gradient(160deg,#181714,#0d0d0d)}
+.process .steps::before{content:"";position:absolute;left:6%;right:6%;bottom:45px;height:110px;border:1px solid rgba(212,161,65,.4);border-radius:50%;transform:perspective(450px) rotateX(65deg);pointer-events:none}
+.process .steps .step{--fan-offset:calc(var(--fan-index) - 1.5);position:relative!important;flex:0 0 clamp(220px,22vw,330px)!important;width:clamp(220px,22vw,330px)!important;min-height:350px!important;box-sizing:border-box!important;margin:0 -24px!important;padding:30px 25px!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;z-index:calc(5 - var(--fan-index));border-radius:25px!important;border:1px solid rgba(246,215,151,.38)!important;background:linear-gradient(150deg,#363029,#1e1c19 54%,#131313)!important;box-shadow:0 22px 0 rgba(0,0,0,.24),0 38px 60px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.13)!important;transform:translateY(calc(abs(var(--fan-offset)) * 18px)) rotate(calc(var(--fan-offset) * 8deg));transform-origin:50% 100%;transition:transform .3s ease,box-shadow .3s ease,background .3s ease!important;cursor:default}
+.process .steps .step:nth-child(1){transform:translateY(35px) rotate(-12deg);z-index:1}
+.process .steps .step:nth-child(2){transform:translateY(8px) rotate(-4deg);z-index:3}
+.process .steps .step:nth-child(3){transform:translateY(8px) rotate(4deg);z-index:4}
+.process .steps .step:nth-child(4){transform:translateY(35px) rotate(12deg);z-index:2}
+.process .steps .step:hover,.process .steps .step:focus-visible{transform:translateY(-36px) rotate(0deg) scale(1.06)!important;z-index:10!important;background:linear-gradient(150deg,#4b3c25,#201d18 60%,#131313)!important;box-shadow:0 30px 65px rgba(0,0,0,.7),0 0 0 2px rgba(221,168,71,.35)!important;outline:none}
+.process .steps .step-num{font-weight:800;color:#e5b65b}
+.process .steps .step-icon{margin-top:25px;color:#e5b65b}
+.process .steps .step h3{margin-top:22px;line-height:1.15;font-size:clamp(19px,1.7vw,25px)}
+.process .steps .step p{line-height:1.55;font-size:13px}
+@media(max-width:1050px){.process .steps .step{flex-basis:25vw!important;width:25vw!important;min-height:365px!important;margin:0 -10px!important;padding:24px 18px!important}.process .steps{padding:40px 14px 65px!important;min-height:475px!important}}
+@media(max-width:700px){.process .steps{display:flex!important;justify-content:flex-start!important;align-items:stretch!important;overflow-x:auto!important;scroll-snap-type:x mandatory;gap:15px!important;min-height:0!important;padding:24px 20px 38px!important;border-radius:22px;-webkit-overflow-scrolling:touch}.process .steps::before{display:none}.process .steps .step,.process .steps .step:nth-child(n){flex:0 0 min(78vw,315px)!important;width:min(78vw,315px)!important;min-height:310px!important;margin:0!important;padding:25px 22px!important;transform:none!important;scroll-snap-align:center;z-index:auto!important}.process .steps .step:hover,.process .steps .step:focus-visible{transform:translateY(-4px)!important}.process .steps .step h3{font-size:23px}.process .steps .step p{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.process .steps .step{transition:none!important}}
